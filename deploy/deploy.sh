@@ -3,8 +3,11 @@
 # any future command that fails will exit the script
 set -e
 # Lets write the public key of our aws instance
+echo "ssh-agent verify"
 eval $(ssh-agent -s)
+echo "ssh-agent verify finish"
 echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+echo "private_key=$PRIVATE_KEY"
 
 # ** Alternative approach
 # echo -e "$PRIVATE_KEY" > /root/.ssh/id_rsa
