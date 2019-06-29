@@ -6,8 +6,12 @@ set -e
 echo "ssh-agent verify"
 eval $(ssh-agent -s)
 echo "ssh-agent verify finish"
-echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-echo "private_key=$PRIVATE_KEY"
+echo "$PRIVATE_KEY"
+
+ssh-add "$PRIVATE_KEY"
+
+#echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+#echo "private_key=$PRIVATE_KEY"
 
 # ** Alternative approach
 # echo -e "$PRIVATE_KEY" > /root/.ssh/id_rsa
