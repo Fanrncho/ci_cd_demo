@@ -5,7 +5,7 @@ before_script:
   - npm install
 
 stages:
-  - test
+  #- test
   - deploy
 
 # lint and test are two different jobs in the same stage.
