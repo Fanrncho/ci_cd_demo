@@ -8,6 +8,8 @@ eval $(ssh-agent -s)
 echo "ssh-agent verify finish"
 echo "$PRIVATE_KEY"
 
+chmod 600 "$PRIVATE_KEY"
+
 ssh-add "$PRIVATE_KEY"
 
 #echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
