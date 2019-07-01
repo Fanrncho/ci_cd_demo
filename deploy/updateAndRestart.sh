@@ -6,6 +6,8 @@ set -e
 # Delete the old repo
 rm -rf /home/smallgame/gitlabDemo/
 
+mkdir -p /home/smallgame/gitlabDemo
+
 cd /home/smallgame/gitlabDemo
 
 # clone the repo again
