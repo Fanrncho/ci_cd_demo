@@ -6,6 +6,7 @@ set -e
 echo "ssh-agent verify"
 eval $(ssh-agent -s)
 echo "ssh-agent verify finish"
+
 echo "$PRIVATE_KEY"
 
 chmod 600 "$PRIVATE_KEY"
