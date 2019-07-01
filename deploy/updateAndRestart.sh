@@ -4,7 +4,7 @@
 set -e
 
 # Delete the old repo
-#rm -rf /home/smallgame/gitlabDemo/
+rm -rf /home/smallgame/gitlabDemo/
 
 mkdir -p /home/smallgame/gitlabDemo
 
