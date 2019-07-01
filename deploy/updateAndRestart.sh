@@ -25,7 +25,7 @@ cd /home/smallgame/gitlabDemo/ci_cd_demo
 
 #pm2 needs to be installed globally as we would be deleting the repo folder.
 # this needs to be done only once as a setup script.
-npm install pm2 -g
+npm install pm2
 # starting pm2 daemon
 pm2 status
 
